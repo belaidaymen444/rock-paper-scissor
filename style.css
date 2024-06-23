@@ -10,7 +10,6 @@ body {
   align-items: center;
   display: block;
 }
-
 h1 {
   color: hsl(27, 74%, 48%);
   -webkit-text-stroke: 2.5px black;
@@ -27,7 +26,6 @@ h1 {
 h1::before {
   content: "✊";
 }
-
 .groupe {
   justify-content: center;
   display: block;
@@ -37,24 +35,25 @@ h1::before {
 .groupe .scoreEach p {
   display: inline-flex;
   font-size: 3rem;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
+  align-items: center;
   padding-inline: 12rem;
   font-family: "Chakra Petch", sans-serif;
 }
 .names {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   margin-bottom: 2rem;
   margin-top: 3rem;
   align-items: center;
-  align-items: center;
+  
 }
 .names p {
   font-size: 1.5rem;
   color: rgb(192, 192, 192);
   display: flex;
-  padding-inline: 10rem;
+  margin-inline: 5rem;
   text-align: center;
 }
 .names:first-child {
@@ -70,11 +69,9 @@ h1::before {
 }
 .battle section {
   display: flex;
-
   width: 20%;
   height: 110%;
   margin: 2rem 1rem 0rem 1rem;
-
   font-size: 5rem;
   text-align: center;
   justify-content: center;
@@ -85,7 +82,6 @@ h1::before {
 .battle p {
   font-size: 4rem;
 }
-
 .selection {
   width: 100%;
   height: 25%;
@@ -101,9 +97,7 @@ h1::before {
   display: flex;
   margin: 1rem;
   align-items: center;
-
   justify-content: center;
-
   font-size: 2.5rem;
 }
 .selection section:hover {
@@ -114,7 +108,6 @@ h1::before {
 .selection section::selection {
   background: none;
 }
-
 .alerts {
   position: absolute;
   text-align: center;
@@ -132,6 +125,8 @@ h1::before {
   transition: all 1s ease;
   transform: scale(0, 0);
   z-index: 20;
+  border-radius: 10px;
+ 
 }
 
 .alerts .winner {
@@ -147,4 +142,33 @@ h1::before {
   );
   text-decoration: none;
   color: white;
+}
+.alerts a{
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  
+}
+
+
+@media  (max-width:850px) {
+  .groupe .scoreEach p{
+    padding-inline: 5rem;
+    display: inline;
+  }
+  
+  .alerts{
+    left: 7%;
+  }
+  .battle section{
+    
+    border: double 10px rgb(0, 0, 0);
+    border-radius: 100px;
+   
+    padding-inline: 1rem;
+  }
+  .selection section {
+    padding-inline: 1.5rem;
+  }
+
 }

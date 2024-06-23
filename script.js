@@ -75,6 +75,7 @@ function checkWinner() {
     winner.style.color = "green";
     alerts.style.transform = "scale(1,1)";
     groupe.style.display = "none";
+    alerts.style.boxShadow ="0 0 20px green"
   }
   if (scoreComputer.textContent == 5) {
     winner.textContent = "You Lost";
@@ -82,5 +83,7 @@ function checkWinner() {
 
     alerts.style.transform = "scale(1,1)";
     groupe.style.display = "none";
+    alerts.style.boxShadow ="0 0 20px red"
+    
   }
 }
